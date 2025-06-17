@@ -5,7 +5,7 @@
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
     border-bottom: 3px solid rgba(100, 114, 125, 0.0);
     color: #ffffff;
     transition-property: background-color;
@@ -95,6 +95,7 @@ button:hover {
 #power-profiles-daemon,
 #mpd {
     padding: 0 10px;
+    background-color: rgba(0, 0, 0, 0.0);
     color: #ffffff;
 }
 
@@ -113,19 +114,26 @@ button:hover {
     margin-right: 0;
 }
 
-#clock {
-    background-color: #64727D;
+#custom-apple {
+    font-family: "SF Pro Text";
+    font-size: 16px;
+    padding: 0 10px;
+    color: white;
 }
 
-#battery {
-    background-color: #ffffff;
+#clock {
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+/* #battery {
+    background-color: rgba(0, 0, 0, 0.2);
     color: #000000;
 }
 
 #battery.charging, #battery.plugged {
     color: #ffffff;
     background-color: #26A65B;
-}
+} */
 
 @keyframes blink {
     to {
@@ -150,17 +158,17 @@ button:hover {
 }
 
 #power-profiles-daemon.performance {
-    background-color: #f53c3c;
+    background-color: rgba(0, 0, 0, 0.0);
     color: #ffffff;
 }
 
 #power-profiles-daemon.balanced {
-    background-color: #2980b9;
+    background-color: rgba(0, 0, 0, 0.0);
     color: #ffffff;
 }
 
 #power-profiles-daemon.power-saver {
-    background-color: #2ecc71;
+    background-color: rgba(0, 0, 0, 0.0);
     color: #000000;
 }
 
@@ -169,16 +177,16 @@ label:focus {
 }
 
 #cpu {
-    background-color: #2ecc71;
-    color: #000000;
+    background-color: rgba(0, 0, 0, 0.0);
+    color: #ffffff;
 }
 
 #memory {
-    background-color: #9b59b6;
+    background-color: rgba(0, 0, 0, 0.0);
 }
 
 #disk {
-    background-color: #964B00;
+    background-color: rgba(0, 0, 0, 0.0);
 }
 
 #backlight {
@@ -186,20 +194,20 @@ label:focus {
 }
 
 #network {
-    background-color: #2980b9;
+    background-color: rgba(0, 0, 0, 0.0);
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+    background-color: rgba(0, 0, 0, 0.0);
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
+    background-color: rgba(0, 0, 0, 0.0);
+    color: #FFFFFF;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
+    background-color: rgba(0, 0, 0, 0.0);
     color: #2a5c45;
 }
 
@@ -227,7 +235,7 @@ label:focus {
 }
 
 #temperature {
-    background-color: #f0932b;
+    background-color: rgba(0, 0, 0, 0.0);
 }
 
 #temperature.critical {
@@ -248,12 +256,11 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
+    background-color: rgba(0, 0, 0, 0.0);
 }
 
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
+    background-color: rgba(0, 0, 0, 0.0);
 }
 
 #mpd {

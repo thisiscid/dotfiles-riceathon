@@ -8,9 +8,9 @@
     // Choose the order of the modules
     "modules-left": [
         "custom/fedora",
-        "sway/workspaces",
-        "sway/mode",
-        "sway/scratchpad",
+        "hyprland/workspaces",
+        "hyprland/submap",
+        // "hyprland/scratchpad",
         "custom/media"
     ],
     "modules-center": [
@@ -66,7 +66,7 @@
     "custom/fedora": {
         "exec": "bash -c 'echo  Fedora   $(grep ^VERSION_ID= /etc/os-release | cut -d= -f2)'",        "tooltip": false
     },
-    "sway/scratchpad": {
+    "hyprland/scratchpad": {
         "format": "{icon} {count}",
         "show-empty": false,
         "format-icons": ["", ""],

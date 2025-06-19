@@ -7,9 +7,9 @@ configuration {
 }
 
 * {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.0);
   background-color: rgba(0, 0, 0, 0.0);
-  foreground: white;
+  foreground: rgba(255, 255, 255, 0.212);
   text-color: white;
 }
 
@@ -18,14 +18,17 @@ inputbar {
 }
 
 window {
-    width: 30%;
+    width: 50%;
     border: 2px;
-    border-radius: 15px;
+    border-radius: 12px;
 }
 
 element {
   background: rgba(0, 0, 0, 0.4);
   background-color: rgba(0, 0, 0, 0.4);
+  border: 2px;
+  border-radius: 12px;
+  border-color: rgba(255, 255, 255, 0.01);
 }
 
 element alternate {
@@ -37,6 +40,13 @@ entry, element-text {
   text-color: white;
 }
 
+listview {
+  lines: 8;
+}
+
+element-icon {
+  size: 40px;
+}
 element.normal,
 element.alternate.normal {
   background-color: rgba(0, 0, 0, 0.4);

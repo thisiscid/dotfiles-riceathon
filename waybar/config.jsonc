@@ -12,11 +12,13 @@
         "hyprland/submap",
         // "hyprland/scratchpad",
         "custom/media",
-        "temperature"
+        "temperature",
+        "network"
+
     ],
     "modules-center": [
-        "memory",
         "custom/pronouns",
+        "memory",
         // "mpd",
         "clock",
         "custom/weather",
@@ -24,10 +26,9 @@
     ],
     "modules-right": [
         "tray",
-        "idle_inhibitor",
+        // "idle_inhibitor",
         "pulseaudio",
-        "network",
-        // "power-profiles-daemon",
+        "power-profiles-daemon",
         // "cpu",
         "backlight",
         "keyboard-state",
@@ -135,7 +136,9 @@
     "clock": {
         "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format": " {:%H:%M}",
+        "format-alt": "{:%Y-%m-%d}",
+        "font": "JetBrainsMono Nerd Font 12"
     },
     "cpu": {
         "format": "{usage}% ",

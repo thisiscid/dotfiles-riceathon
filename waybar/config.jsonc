@@ -12,28 +12,28 @@
         "hyprland/submap",
         // "hyprland/scratchpad",
         "custom/media",
-        "custom/weather",
-        "custom/pronouns"
+        "temperature"
     ],
     "modules-center": [
-        "sway/window"
+        "memory",
+        "custom/pronouns",
+        // "mpd",
+        "clock",
+        "custom/weather",
+        "cpu"
     ],
     "modules-right": [
-        "mpd",
+        "tray",
         "idle_inhibitor",
         "pulseaudio",
         "network",
-        "power-profiles-daemon",
-        "cpu",
-        "memory",
-        "temperature",
+        // "power-profiles-daemon",
+        // "cpu",
         "backlight",
         "keyboard-state",
-        "sway/language",
-        "battery",
-        "battery#bat2",
-        "clock",
-        "tray",
+        // "sway/language",
+        // "battery",
+        // "battery#bat2",
         "custom/spotlight",
         "custom/power"
     ],

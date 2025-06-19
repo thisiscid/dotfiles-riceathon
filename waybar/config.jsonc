@@ -11,7 +11,9 @@
         "hyprland/workspaces",
         "hyprland/submap",
         // "hyprland/scratchpad",
-        "custom/media"
+        "custom/media",
+        "custom/weather",
+        "custom/pronouns"
     ],
     "modules-center": [
         "sway/window"
@@ -32,6 +34,7 @@
         "battery#bat2",
         "clock",
         "tray",
+        "custom/spotlight",
         "custom/power"
     ],
     // Modules configuration
@@ -63,8 +66,22 @@
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
+    "custom/spotlight": {
+        "format": "",
+        "on-click": "rofi -show combi"
+    },
     "custom/fedora": {
-        "exec": "bash -c 'echo  Fedora   $(grep ^VERSION_ID= /etc/os-release | cut -d= -f2)'",        "tooltip": false
+        "exec": "bash -c 'echo  Fedora   $(grep ^VERSION_ID= /etc/os-release | cut -d= -f2)'", 
+        "tooltip": false
+    },
+    "custom/weather": {
+        "interval": 600,
+        "exec": "curl -s 'wttr.in/?format=1'",
+        "tooltip": false
+    },
+    "custom/pronouns": {
+        "format": "she/her | trans rights!",
+        "format-alt": "he/him"
     },
     "hyprland/scratchpad": {
         "format": "{icon} {count}",
@@ -113,9 +130,10 @@
         //   "blueman": "bluetooth",
         //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
         // }
+
     },
     "clock": {
-        // "timezone": "America/New_York",
+        "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
@@ -170,20 +188,20 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
+        "format-wifi": "{essid} ({signalStrength}%)",
+        "format-ethernet": "{ipaddr}/{cidr}",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "Disconnected",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
+        "scroll-step": 1,
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
+        "format-source": "{volume}% ", 
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
@@ -209,15 +227,14 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/power": {
-        "format" : "⏻ ",
+        "format" : " ⏻ ",
 		"tooltip": false,
 		"menu": "on-click",
 		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
 		"menu-actions": {
 			"shutdown": "shutdown",
 			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
+			"log_out": "hyprctl dispatch exit",
 		}
     }
 }

@@ -3,7 +3,7 @@ configuration {
   combi-modes: [ window, drun, run ];
   show-icons: true;
   /* font: "JetBrainsMono Nerd Font"; */
-  /* transparency: "real"; */
+  transparency: "real";
 }
 
 * {
